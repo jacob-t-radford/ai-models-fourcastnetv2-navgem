@@ -21,7 +21,7 @@ def read(fname):
 
 
 version = None
-for line in read("ai_models_fourcastnetv2/__init__.py").split("\n"):
+for line in read("ai_models_fourcastnetv2_gfs/__init__.py").split("\n"):
     if line.startswith("__version__"):
         version = line.split("=")[-1].strip()[1:-1]
 
@@ -30,7 +30,7 @@ assert version
 
 
 setuptools.setup(
-    name="ai-models-fourcastnetv2",
+    name="ai-models-fourcastnetv2-gfs",
     version=version,
     description="An ai-models plugin to run the Nvidia spherical harmonics FourCastNet v2 (small) model",
     long_description=read("README.md"),
@@ -42,7 +42,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     include_package_data=True,
     install_requires=[
-        "ai-models>=0.3.6",
+        "ai-models-gfs",
         "torch>=2.0.0",
         "torch_harmonics==0.6.2",
         "ruamel.yaml>=0.17.21",
@@ -50,9 +50,9 @@ setuptools.setup(
     zip_safe=True,
     keywords="tool",
     entry_points={
-        "ai_models.model": [
+        "ai_models_gfs.model": [
             # "fourcastnetv2 = ai_models_fourcastnetv2.model:model",
-            "fourcastnetv2-small = ai_models_fourcastnetv2.model:model"
+            "fourcastnetv2-small = ai_models_fourcastnetv2_gfs.model:model"
         ]
     },
     classifiers=[
