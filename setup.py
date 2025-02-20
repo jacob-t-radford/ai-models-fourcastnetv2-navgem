@@ -20,11 +20,7 @@ def read(fname):
     return io.open(file_path, encoding="utf-8").read()
 
 
-version = None
-for line in read("ai_models_fourcastnetv2_gfs/__init__.py").split("\n"):
-    if line.startswith("__version__"):
-        version = line.split("=")[-1].strip()[1:-1]
-
+version = "0.0.5"
 
 assert version
 
