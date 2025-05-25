@@ -13,16 +13,16 @@ from torch.utils.checkpoint import checkpoint
 from torch.utils.checkpoint import checkpoint
 
 # helpers
-from ai_models_fourcastnetv2_gfs.fourcastnetv2.layers import (
+from ai_models_fourcastnetv2_navgem.fourcastnetv2.layers import (
     trunc_normal_,
     DropPath,
     MLP,
 )
-from ai_models_fourcastnetv2_gfs.fourcastnetv2.layers import (
+from ai_models_fourcastnetv2_navgem.fourcastnetv2.layers import (
     SpectralAttentionS2,
     SpectralConvS2,
 )
-from ai_models_fourcastnetv2_gfs.fourcastnetv2.layers import (
+from ai_models_fourcastnetv2_navgem.fourcastnetv2.layers import (
     SpectralAttention2d,
     SpectralConv2d,
 )
@@ -30,12 +30,12 @@ from ai_models_fourcastnetv2_gfs.fourcastnetv2.layers import (
 import torch_harmonics as harmonics
 
 # to fake the sht module with ffts
-from ai_models_fourcastnetv2_gfs.fourcastnetv2.layers import RealFFT2, InverseRealFFT2
+from ai_models_fourcastnetv2_navgem.fourcastnetv2.layers import RealFFT2, InverseRealFFT2
 
-from ai_models_fourcastnetv2_gfs.fourcastnetv2.contractions import *
+from ai_models_fourcastnetv2_navgem.fourcastnetv2.contractions import *
 
 # from .fourcastnetv2 import activations
-from ai_models_fourcastnetv2_gfs.fourcastnetv2.activations import *
+from ai_models_fourcastnetv2_navgem.fourcastnetv2.activations import *
 
 
 class SpectralFilterLayer(nn.Module):

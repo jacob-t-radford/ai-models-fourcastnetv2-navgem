@@ -1,0 +1,1 @@
+from ai_models_fourcastnetv2_navgem.fourcastnetv2.sfnonet import FourierNeuralOperatorNet

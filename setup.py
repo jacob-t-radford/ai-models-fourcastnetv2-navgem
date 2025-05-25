@@ -26,7 +26,7 @@ assert version
 
 
 setuptools.setup(
-    name="ai-models-fourcastnetv2-gfs",
+    name="ai-models-fourcastnetv2-navgem",
     version=version,
     description="An ai-models plugin to run the Nvidia spherical harmonics FourCastNet v2 (small) model",
     long_description=read("README.md"),
@@ -38,7 +38,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     include_package_data=True,
     install_requires=[
-        "ai-models-gfs",
+        "ai-models-navgem",
         "torch>=2.0.0",
         "torch_harmonics==0.6.2",
         "ruamel.yaml>=0.17.21",
@@ -46,9 +46,9 @@ setuptools.setup(
     zip_safe=True,
     keywords="tool",
     entry_points={
-        "ai_models_gfs.model": [
+        "ai_models_navgem.model": [
             # "fourcastnetv2 = ai_models_fourcastnetv2.model:model",
-            "fourcastnetv2-small = ai_models_fourcastnetv2_gfs.model:model"
+            "fourcastnetv2-small = ai_models_fourcastnetv2_navgem.model:model"
         ]
     },
     classifiers=[

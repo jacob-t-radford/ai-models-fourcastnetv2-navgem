@@ -11,9 +11,9 @@ import os
 
 import numpy as np
 import torch
-from ai_models_gfs.model import Model
+from ai_models_navgem.model import Model
 
-import ai_models_fourcastnetv2_gfs.fourcastnetv2 as nvs
+import ai_models_fourcastnetv2_navgem.fourcastnetv2 as nvs
 
 LOG = logging.getLogger(__name__)
 
